@@ -1,0 +1,57 @@
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "stephanepiriou.github.io" # the base hostname & protocol for your site.
+
+paginate: 4 #articles per page
+paginate_path: /blog/page:num #makes pagination working
+
+# header text
+title: Stéphane Piriou's Blog
+header: Some ideas and other tought...
+
+# for welcome page
+# to replace image go to index.html
+email:
+  address: "stephane.piriou@zaclys.net"
+  text: "stephane.piriou (at) zaclys.net"
+
+# disqus comment
+disqus:
+    shortname: "test" #your disqus comment short name
+
+# google analytics
+google:
+    tracking-id: "" #your tracking id here
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
+
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "docker-jekyll-builder-build.sh"
+  - "docker-jekyll-builder-serve.sh"
+  - "docker-jekyll-pages-build.sh"
+  - "docker-jekyll-pages-serve.sh"
+
+permalink: /posts/:title
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
