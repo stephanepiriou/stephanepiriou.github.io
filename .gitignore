@@ -2,3 +2,5 @@ _site
 .sass-cache
 Gemfile.lock
 .DS_Store
+.idea/
+2007-02-01-markdown-demo.md
